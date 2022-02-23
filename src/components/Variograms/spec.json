@@ -1,0 +1,145 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 100,
+  "layer": [
+    {
+      "mark": {
+        "type": "rect"
+      },
+      "data": {
+        "name": "userKernels"
+      },
+      "transform": [],
+      "encoding": {
+        "stroke": {
+          "value": "black"
+        },
+        "strokeWidth": {
+          "value": 0.5
+        },
+        "fill": {
+          "value": "lightgrey"
+        },
+        "opacity": {
+          "value": 0.25
+        },
+        "x": {
+          "field": "r0",
+          "type": "quantitative",
+          "scale": {
+            "domainMin": 0
+          }
+        },
+        "x2": {
+          "field": "r1",
+          "type": "quantitative",
+          "scale": {
+            "domainMin": 0
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "diffPerBin"
+      },
+      "mark": {"type": "square", "tooltip": true},
+      "encoding": {
+        "size": {"value": 50},
+        "y": {
+          "value": -10
+        },
+        "x": {
+          "field": "center",
+          "type": "quantitative"
+        },
+        "stroke": {
+          "value": 0
+        },
+        "fill": {
+          "title": null,
+          "legend": null,
+          "field": "value",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "greys"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "tooltip":true
+      },
+      "data": {
+        "name": "variogs"
+      },
+      "transform": [],
+      "encoding": {
+        "x": {
+          "field": "center",
+          "type": "quantitative",
+          "title": null,
+          "axis": {
+            "grid": false
+          }
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "title": null
+        },
+        "detail": {
+          "field": "variable",
+          "type": "nominal"
+        },
+        "strokeWidth": {
+          "value": 0.5
+        },
+        "color": {
+          "value": "black"
+        },
+        "strokeOpacity": {
+          "value": 0.25
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "opacity": 0.5,
+        "filled": true,
+        "tooltip":true
+      },
+      "data": {
+        "name": "variogs"
+      },
+      "encoding": {
+        "size": {
+          "value": 10
+        },
+        "color": {
+          "value": "black"
+        },
+        "x": {
+          "field": "center",
+          "type": "quantitative",
+          "title": null
+        },
+        "y": {
+          "field": "value",
+          "scale": {
+            "type": "linear"
+          },
+          "title": null
+        },
+        "detail": {
+          "field": "variable",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}

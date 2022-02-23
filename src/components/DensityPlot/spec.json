@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 100,
+  "layer": [
+    {
+      "mark": "area",
+      "data": {"name": "density"},
+      "encoding": {
+        "color": {"value": "#999"},
+        "strokeWidth": {"value": 1},
+        "x": {
+          "field": "x",
+          "title": null,
+          "axis": {"grid": false},
+          "type": "quantitative",
+          "scale": {"domainMin": 0}
+        },
+        "y": {"field": "y", "title": null, "type": "quantitative"}
+      }
+    },
+    {
+      "mark": "rule",
+      "data": {"name": "percentileCutsArea"},
+      "encoding": {
+        "x": {
+          "field": "start",
+          "type": "quantitative",
+          "scale": {"domainMin": 0}
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "data": {"name": "percentileCutsArea"},
+      "encoding": {
+        "x": {
+          "field": "end",
+          "type": "quantitative",
+          "scale": {"domainMin": 0}
+        }
+      }
+    },
+    {
+      "mark": {"type": "image", "width": 10, "height": 10},
+      "data": {"name": "percentileCutsArea"},
+      "encoding": {
+        "url": {"field": "imageUrl", "type": "nominal"},
+        "x": {
+          "field": "center",
+          "type": "quantitative",
+          "scale": {"domainMin": 0}
+        },
+        "y": {"value": -5, "type": "quantitative"}
+      }
+    }
+  ]
+}

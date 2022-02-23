@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"name": "correlations"},
+  "mark": {
+    "type": "point",
+    "tooltip": true
+  },
+  "width": 300,
+  "height": 300,
+  "params": [
+    {
+      "name": "inputVarsInMap",
+      "value": []
+    }
+  ],
+  "encoding": {
+    "shape": {
+      "value": "square"
+    },
+    "x": {
+      "field": "colName",
+      "axis": {
+        "title": "Correlations"
+      }
+    },
+    "y": {
+      "field": "rowName",
+      "axis": {
+        "title": null
+      }
+    },
+    "size": {
+      "condition": {
+        "test": "indexof(inputVarsInMap, datum.rowName) >= 0 || indexof(inputVarsInMap, datum.colName) >=0",
+        "value": 200
+      },
+      "value": 100
+    },
+    "stroke": {
+      "value": null
+    },
+    "fill": {
+      "field": "value",
+      "type": "quantitative",
+      "legend": null,
+      "scale": {
+        "scheme": "redblue",
+        "domain": [
+          -1,
+          1
+        ]
+      }
+    }
+  }
+}
