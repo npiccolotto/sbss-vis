@@ -6,7 +6,7 @@ This repository contains code for the prototype _SBSSvis_, a visual analytics ap
 
 Please refer to the paper:
 
-N. Piccolotto, M. Bögl, C. Muehlmann, K. Nordhausen, P. Filzmoser, and S. Miksch: "Visual Parameter Selection for Spatial Blind Source Separation". [https://arxiv.org/abs/2112.08888](https://arxiv.org/abs/2112.08888)
+N. Piccolotto, M. Bögl, C. Muehlmann, K. Nordhausen, P. Filzmoser, and S. Miksch: "Visual Parameter Selection for Spatial Blind Source Separation". [https://diglib.eg.org/handle/10.1111/cgf14530](https://diglib.eg.org/handle/10.1111/cgf14530)
 
 ## Installation and running
 
